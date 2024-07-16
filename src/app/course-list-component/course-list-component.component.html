@@ -1,1 +1,27 @@
-<p>course-list-component works!</p>
+<h1>Liste de cours</h1>
+<section class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let formation of formations">
+      <div class="card">
+        <img
+          src="../assets/images/formation.jpg"
+          alt="{{ formation.nom }}"
+          class="card-image"
+        />
+        <div class="card-content">
+          <h2 class="card-title">{{ formation.nom }}</h2>
+          <p class="card-stack">{{ formation.stackTechnique }}</p>
+          <p class="card-dates">Dates: {{ formation.dates }}</p>
+          <p class="card-titre">{{ formation.titre }}</p>
+          <p class="card-places">
+            Nombre de places: {{ formation.nombrePlaces }}
+          </p>
+          <p class="card-tarif">Tarif: {{ formation.tarif }} EUR</p>
+        </div>
+        <a routerLink="/registration">Je m'inscris</a>
+
+        <!-- <button routerLink="/registration">Je m'inscris</button> -->
+      </div>
+    </div>
+  </div>
+</section>

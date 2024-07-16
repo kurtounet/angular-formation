@@ -1,0 +1,54 @@
+.card {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card-stack,
+.card-dates,
+.card-titre,
+.card-places,
+.card-tarif {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+a {
+    background-color: blue;
+    color: whitesmoke;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+a:hover {
+    cursor: pointer;
+    background-color: darkblue;
+    color: rgb(245, 8, 8);
+}
