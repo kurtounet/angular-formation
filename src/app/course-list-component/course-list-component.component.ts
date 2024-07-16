@@ -19,6 +19,9 @@ export interface Course {
   styleUrl: './course-list-component.component.css'
 })
 export class CourseListComponentComponent {
+    onSubmit() {
+        alert('Form submitted!');
+    }
 formations: Course[] = [
     {
         "image": "url_image_1.jpg",
