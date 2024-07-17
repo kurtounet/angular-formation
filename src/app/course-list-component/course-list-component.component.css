@@ -8,6 +8,13 @@
     padding: 10px;
 }
 
+.fcomplete {
+    background-color: rgba(255, 0, 0, 1);
+    color: rgb(26, 11, 238) !important;
+
+
+}
+
 .infra {
     background-color: rgba(5, 5, 250, 0.3);
 }

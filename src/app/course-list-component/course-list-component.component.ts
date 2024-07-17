@@ -28,7 +28,7 @@ export interface Course {
 export class CourseListComponentComponent {
    
     //IT, Design ou Dev
-formations: Course[] = [
+FORMATIONS: Course[] = [
     {
         "image": "url_image_1.jpg",
         "nom": "Formation React Avancé",
@@ -448,16 +448,16 @@ formations: Course[] = [
 ];
     ArrayStackTechnique:  string[] = ['Tout','Infra','Dev','Design'];    
     selectedStackTechnique:string='';  
-    ArrayFormationFilter: Course[] = this.formations;  
+    ArrayFormationFilter: Course[] = this.FORMATIONS;  
     recevSelectedFormation(nameFormation: string) { 
         this.selectedStackTechnique = nameFormation; 
         if (nameFormation === 'Tout') {
-            this.ArrayFormationFilter = this.formations;
-            console.log(this.ArrayFormationFilter );            
+            this.ArrayFormationFilter = this.FORMATIONS;
+            //console.log(this.ArrayFormationFilter );            
         } else {            
-             this.ArrayFormationFilter = this.formations.filter((formation) => formation.stackTechnique === nameFormation);
+             this.ArrayFormationFilter = this.FORMATIONS.filter((formation) => formation.stackTechnique === nameFormation);
              
-             console.log(this.ArrayFormationFilter );            
+             //console.log(this.ArrayFormationFilter );            
         }
     }
     onSubmit(lieux: Array<lieux>) {
