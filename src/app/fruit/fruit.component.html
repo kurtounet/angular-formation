@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <select name="" id="" (change)="selectImage($event)">
+      <option value=""></option>
+      <option value="foot">Foot</option>
+      <option value="natation">Natation</option>
+      <option value="volley">Volley</option>
+    </select>
+    <div class="col-md-6">
+      <button (click)="afficher(0)">Fruit</button>
+      <button (click)="afficher(1)">Smoothie</button>
+      <button (click)="afficher(2)">Glace</button>
+    </div>
+    <div class="col-md-6">
+      <img [src]="urlImage" alt="" />
+    </div>
+  </div>
+</div>
