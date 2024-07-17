@@ -34,8 +34,7 @@ export class FruitComponent {
       this.afficher(1);
     } else if (value === "volley") {
       this.afficher(2);
-    }
-     
+    }  
   }
   /*
   urlIamge: string = '';

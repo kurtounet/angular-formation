@@ -1,35 +1,62 @@
 <h1>Liste de cours</h1>
 <section class="container">
+  <app-search-course
+    [formationsList]="ArrayStackTechnique"
+    (formationSelected)="recevSelectedFormation($event)"
+  ></app-search-course>
   <div class="row">
-    <div class="col-md-3" *ngFor="let formation of formations">
-      <div class="card">
-        <img
-          src="../assets/images/formation.jpg"
-          alt="{{ formation.nom }}"
-          class="card-image"
-        />
-        <div class="card-content">
-          <h2 class="card-title">{{ formation.nom }}</h2>
-          <p class="card-stack">{{ formation.stackTechnique }}</p>
-          <p class="card-dates">Dates: {{ formation.dates }}</p>
-          <p class="card-titre">{{ formation.titre }}</p>
-          <p class="card-places">
-            Nombre de places: {{ formation.nombrePlaces }}
-          </p>
-          <p class="card-tarif">Tarif: {{ formation.tarif }} EUR</p>
-        </div>
-        <!-- <a routerLink="/registration">Je m'inscris</a> -->
-        <!-- Button trigger modal -->
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-        >
-          Inscription
-        </button>
+    <!-- -->
+    <div
+      *ngFor="let formation of ArrayFormationFilter"
+      [ngClass]="{
+        card: true,
+        dev: formation.stackTechnique === 'Dev',
+        infra: formation.stackTechnique === 'Infra',
+        design: formation.stackTechnique === 'Design',
+        'col-md-3': true
+      }"
+    >
+      <img
+        src="../assets/images/formation.jpg"
+        alt="{{ formation.nom }}"
+        class="card-image"
+      />
+      <div class="card-content">
+        <h2 class="card-title">{{ formation.nom }}</h2>
+        <p class="card-stack">{{ formation.stackTechnique }}</p>
+        <p class="card-dates">Dates: {{ formation.dates }}</p>
+        <p class="card-titre">{{ formation.titre }}</p>
 
-        <!-- Modal -->
+        <p class="card-places" *ngIf="formation.nombrePlaces < 15">
+          Nombre de places: {{ formation.nombrePlaces }}
+        </p>
+        <p class="card-places" *ngIf="formation.nombrePlaces >= 15">
+          Formation complète
+        </p>
+
+        <p class="card-tarif">Tarif: {{ formation.tarif }} EUR</p>
+      </div>
+      <!-- <a routerLink="/registration">Je m'inscris</a> -->
+      <!-- Button trigger modal -->
+      <button
+        (click)="onSubmit(formation.lieux)"
+        type="button"
+        [ngClass]="{
+          btn: true,
+          dev: formation.stackTechnique === 'Dev',
+          infra: formation.stackTechnique === 'Infra',
+          design: formation.stackTechnique === 'Design'
+        }"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Inscription
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Modal 
         <div
           class="modal fade"
           id="exampleModal"
@@ -39,7 +66,7 @@
         >
           <div class="modal-dialog">
             <div class="modal-content">
-              <!-- HEADER Modal -->
+                HEADER Modal  
               <div class="modal-header">
                 <h1 class="modal-title fs-5" id="exampleModalLabel">
                   Modal title
@@ -51,7 +78,7 @@
                   aria-label="Close"
                 ></button>
               </div>
-              <!-- BODY Modal -->
+                BODY Modal  
               <div class="modal-body">
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
@@ -65,7 +92,7 @@
                   />
                 </div>
               </div>
-              <!-- FOOTER Modal -->
+                FOOTER Modal  
               <div class="modal-footer">
                 <button
                   type="button"
@@ -84,9 +111,5 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- <button routerLink="/registration">Je m'inscris</button> -->
-      </div>
-    </div>
-  </div>
-</section>
+        </div>-->
+<!-- <button (click)="onSubmit()">Je m'inscris</button> -->

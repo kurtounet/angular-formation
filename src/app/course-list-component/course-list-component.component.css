@@ -8,6 +8,18 @@
     padding: 10px;
 }
 
+.infra {
+    background-color: rgba(5, 5, 250, 0.3);
+}
+
+.dev {
+    background-color: rgba(0, 128, 0, 0.3);
+}
+
+.design {
+    background-color: rgba(255, 255, 0, 0.3);
+}
+
 .card-image {
     width: 100%;
     height: 200px;
