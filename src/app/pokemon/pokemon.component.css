@@ -1,0 +1,31 @@
+.card-pokemon {
+    border: 1px solid #020202;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.title {
+    color: brown;
+    text-transform: capitalize;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.id-cp-hp {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    color: #333
+}

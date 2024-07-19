@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HelloService } from '../../shared/services/hello.service';
 
 @Component({
   selector: 'app-fruit',
@@ -7,7 +8,19 @@ import { Component } from '@angular/core';
   templateUrl: './fruit.component.html',
   styleUrl: './fruit.component.css'
 })
-export class FruitComponent {
+export class FruitComponent implements OnInit {
+ bonjour:string = '';
+ somme:number = 0;
+constructor(
+  private helloService:HelloService
+) {
+  
+}
+ngOnInit(): void {  
+  this.bonjour = this.helloService.saluer();
+  this.somme = this.helloService.addisionner(5,5);
+}
+
  imageSport:string[]=[
    'https://images.unsplash.com/photo-1624880357913-a8539238245b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
    'https://images.unsplash.com/photo-1530549387789-4c1017266635?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -23,9 +36,7 @@ export class FruitComponent {
   afficher(id: number) {
     this.urlImage = this.image[id];     
   }
-  scale() {
-    this.urlImage = this.urlImage === this.image[0] ? this.image[1] : this.image[0];
-  }
+  
   selectImage(event: any){
     let value = event.target.value;
     if (value === "foot") {

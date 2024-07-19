@@ -38,6 +38,27 @@
       </div>
       <!-- <a routerLink="/registration">Je m'inscris</a> -->
       <!-- Button trigger modal -->
+      <!-- Exemple (click)="fonction()"
+      <div [ngClass]="{ active: isActive, disabled: isDisabled }">Mon text</div>
+      <button (click)="isActive = !isActive">Toggle actif</button>
+      <button (click)="isDisabled = !isDisabled">Toggle non actif</button>
+       -->
+      <div class="qty-component">
+        <button (click)="increment()" class="btn-qty">+</button>
+        <input type="text" value="{{ quantity }}" />
+        <button (click)="decrement()" class="btn-qty">-</button>
+      </div>
+      <div
+        [ngStyle]="{
+        'background-color': isLight? 'yellow':'white',
+        'font-size.px':fontSize,
+      }"
+      >
+        Le texte a un style dynamique
+      </div>
+      <button (click)="isLight = !isLight">Toggle Highlight</button>
+      <button (click)="fontSize = fontSize + 2">Augment Size</button>
+      <button (click)="fontSize = fontSize - 2">Diminu Size</button>
       <button
         (click)="onSubmit(formation.lieux)"
         type="button"
