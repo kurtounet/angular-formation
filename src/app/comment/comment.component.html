@@ -1,0 +1,13 @@
+<section class="row">
+  @for (comment of comments; track comment.id){
+
+  <div class="card m-1" style="width: 18rem">
+    <div class="card-body">
+      <h4 class="card-title">Comment n°:{{ comment.id }}</h4>
+      <h5 class="card-title">{{ comment.name }}</h5>
+      <p class="card-text">{{ comment.body }}</p>
+      <a href="#" class="btn btn-primary">en savoir plus</a>
+    </div>
+  </div>
+  }
+</section>
