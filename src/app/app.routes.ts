@@ -5,6 +5,7 @@ import { RegistrationFormComponentComponent } from './registration-form-componen
 import { FruitComponent } from './fruit/fruit.component';
 import { MangasComponent } from './mangas/mangas.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
+import { BlogComponent } from './blog/blog.component';
 
 export const routes: Routes = [
     { path: '',component: HomeComponent }, 
@@ -13,5 +14,6 @@ export const routes: Routes = [
     { path: 'fruit',component: FruitComponent },
     { path: 'mangas',component: MangasComponent },
     { path: 'pokemon',component: PokemonComponent },
+    { path: 'blog',component: BlogComponent},
 
 ];
