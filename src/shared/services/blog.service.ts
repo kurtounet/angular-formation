@@ -7,18 +7,22 @@ import {Iblog } from '../interfaces/blog';
 })
 export class BlogService {
 
-  urlApi = 'https://jsonplaceholder.typicode.com/posts';
+  urlApi = 'https://jsonplaceholder.typicode.com';
 
   constructor(private http:HttpClient) { }
  
-  fetchAll() {
-    // <Iblog> Type de retour
+  fetchAll() {    
+    // <Iblog>[] Collection de Iblog de type
     return this.http.get<Iblog[]>(this.urlApi);
   }
 
-  fetchOne(id:number) {
-    return this.http.get(this.urlApi + '/' + id);
+  fetchOne(id:any) {
+    // <Iblog> Type de retour
+    return this.http.get<Iblog>(`${this.urlApi}/posts/${id}`);
   }
+  // fetchOne(userid:number) {
+  //   return this.http.get(this.urlApi + '/' + userid);
+  // }
   // post() {
   //   return this.http.post(this.urlApi + '/', blog);
   // }

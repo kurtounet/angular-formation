@@ -1,0 +1,31 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="image">Image:</label>
+    <input id="image" formControlName="image" type="text" />
+  </div>
+  <div>
+    <label for="nom">Nom:</label>
+    <input id="nom" formControlName="nom" type="text" />
+  </div>
+  <div>
+    <label for="stackTechnique">Stack Technique:</label>
+    <input id="stackTechnique" formControlName="stackTechnique" type="text" />
+  </div>
+  <div>
+    <label for="dates">Dates:</label>
+    <input id="dates" formControlName="dates" type="text" />
+  </div>
+  <div>
+    <label for="titre">Titre:</label>
+    <input id="titre" formControlName="titre" type="text" />
+  </div>
+  <div>
+    <label for="nombrePlaces">Nombre de Places:</label>
+    <input id="nombrePlaces" formControlName="nombrePlaces" type="number" />
+  </div>
+  <div>
+    <label for="tarif">Tarif:</label>
+    <input id="tarif" formControlName="tarif" type="text" />
+  </div>
+  <button type="submit">Submit</button>
+</form>

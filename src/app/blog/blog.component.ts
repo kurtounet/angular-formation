@@ -2,11 +2,12 @@ import { Component, inject, OnInit } from '@angular/core';
 import { BlogService } from '../../shared/services/blog.service';
 import { Iblog } from '../../shared/interfaces/blog';
 import { CommonModule, NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })

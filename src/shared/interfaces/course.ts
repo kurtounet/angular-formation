@@ -2,12 +2,12 @@ import { lieux } from "./lieux";
 
  
 export interface ICourse {
-  image:string; 
-  nom:string;  
-  stackTechnique:string;  
-  dates:string; 
-  titre:string;  
+  image:string | null;
+  nom:string | null;  
+  stackTechnique:string | null;  
+  dates:string | null; 
+  titre: string | null; 
   nombrePlaces: number; 
-  tarif:string;
+  tarif: string | null;
   lieux: lieux[]; 
 }
