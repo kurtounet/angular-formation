@@ -11,9 +11,9 @@ import { ICourse } from '../../shared/interfaces/course';
   styleUrl: './create-course.component.css'
 })
 export class CreateCourseComponent {
-  coursesService = inject(CourseService);
 
-  public form = new FormGroup({
+  coursesService = inject(CourseService);
+  public form:FormGroup = new FormGroup({
     image:new FormControl(''), 
     nom:new FormControl(''),  
     stackTechnique:new FormControl(''),  
@@ -26,5 +26,24 @@ export class CreateCourseComponent {
   onSubmit(){   
     this.coursesService.addCourse(this.form.value);    
   } 
+
+/* NgModel
+service = new CourseService();
+course: ICourse = {      id: 0,      image: '',      nom: '',      stackTechnique: '',      dates: '',
+      titre: '',      numbreDePlace: 0,      tarif: 0,       adresse: ""  };
+
+  onSubmit(form: NgForm) {
+    if (form.valid) {
+      console.log('Form Submitted!', this.course);
+      // Add your logic here to submit the form data to the server
+      this.service.saveCourse(this.course);
+    }
+
+  }
+
+
+
+
+  */
 
 }

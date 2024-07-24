@@ -11,7 +11,8 @@ export class CourseService {
   fetchAllCourses(){    
     return mockCourses;
   }
-  addCourse(course: any){   
+  addCourse(course: ICourse){   
     mockCourses.push(course);
+    console.log(mockCourses);
   }
 }
