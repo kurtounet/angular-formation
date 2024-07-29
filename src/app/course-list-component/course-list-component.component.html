@@ -1,31 +1,23 @@
 <h1>Liste de cours</h1>
 <section class="container">
-  <app-search-course
-    [formationsList]="ArrayStackTechnique"
-    (formationSelected)="recevSelectedFormation($event)"
-  ></app-search-course>
+  <app-search-course [formationsList]="ArrayStackTechnique" (formationSelected)="recevSelectedFormation($event)">
+  </app-search-course>
   <div class="row">
     <!-- -->
-    <div
-      *ngFor="let formation of ArrayFormationFilter"
-      [ngClass]="{
+    <div *ngFor="let formation of ArrayFormationFilter" [ngClass]="{
         card: true,
         dev: formation.stackTechnique === 'Dev',
         infra: formation.stackTechnique === 'Infra',
         design: formation.stackTechnique === 'Design',
         'col-md-3': true
-      }"
-    >
-      <img
-        src="../assets/images/formation.jpg"
-        alt="{{ formation.nom }}"
-        class="card-image"
-      />
+      }">
+      <img src="../assets/images/formation.jpg" alt="{{ formation.nom }}" class="card-image" />
       <div class="card-content">
-        <h2 class="card-title">{{ formation.nom }}</h2>
-        <p class="card-stack">{{ formation.stackTechnique }}</p>
+        <h2 class="card-title">{{ formation.nom | uppercase | slice:0:25 }}</h2>
+        <p class="card-stack">{{ formation.stackTechnique | uppercase }}</p>
         <p class="card-dates">Dates: {{ formation.dates }}</p>
-        <p class="card-titre">{{ formation.titre }}</p>
+        <p class="card-dates">Dates: {{ today |  date:'d MMMM y'}}</p>
+        <p class="card-titre">{{ formation.titre | titlecase}}</p>
 
         <p class="card-places" *ngIf="formation.nombrePlaces < 15">
           Nombre de places: {{ formation.nombrePlaces }}
@@ -48,29 +40,21 @@
         <input type="text" value="{{ quantity }}" />
         <button (click)="decrement()" class="btn-qty">-</button>
       </div>
-      <div
-        [ngStyle]="{
+      <div [ngStyle]="{
         'background-color': isLight? 'yellow':'white',
         'font-size.px':fontSize,
-      }"
-      >
+      }">
         Le texte a un style dynamique
       </div>
       <button (click)="isLight = !isLight">Toggle Highlight</button>
       <button (click)="fontSize = fontSize + 2">Augment Size</button>
       <button (click)="fontSize = fontSize - 2">Diminu Size</button>
-      <button
-        (click)="onSubmit(formation.lieux)"
-        type="button"
-        [ngClass]="{
+      <button (click)="onSubmit(formation.lieux)" type="button" [ngClass]="{
           btn: true,
           dev: formation.stackTechnique === 'Dev',
           infra: formation.stackTechnique === 'Infra',
           design: formation.stackTechnique === 'Design'
-        }"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
+        }" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Inscription
       </button>
     </div>

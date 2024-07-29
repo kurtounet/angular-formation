@@ -16,7 +16,7 @@ import { lieux } from '../../shared/interfaces/lieux';
 })
 export class CourseListComponentComponent implements OnInit{
     constructor(private courseServices: CourseService) { }
-
+   today:Date = new Date();
    quantity:number = 0;
    isActive:boolean = true;
    isDisabled:boolean = false;
