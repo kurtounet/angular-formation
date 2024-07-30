@@ -8,6 +8,6 @@ export interface ICourse {
   dates:string | null; 
   titre: string | null; 
   nombrePlaces: number; 
-  tarif: string | null;
+  tarif: number;
   lieux: lieux[]; 
 }

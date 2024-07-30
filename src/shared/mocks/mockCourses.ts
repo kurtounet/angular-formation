@@ -8,7 +8,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2023-09-01 à 2023-09-10",
         "titre": "Développeur Frontend React",
         "nombrePlaces": 15,
-        "tarif": "1500 EUR",
+        "tarif": 1500 ,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",
@@ -30,7 +30,8 @@ export const mockCourses: ICourse[] = [
         "dates": "2023-10-05 à 2023-10-14",
         "titre": "Data Analyst Python",
         "nombrePlaces": 20,
-        "tarif": "1300 EUR","lieux": [
+        "tarif": 1300,
+        "lieux": [
             {
                 "adresse": "10 rue de la paix",
                 "ville":"Paris"
@@ -50,7 +51,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2023-11-15 à 2023-11-25",
         "titre": "Développeur Backend Java",
         "nombrePlaces": 12,
-        "tarif": "1800 EUR","lieux": [
+        "tarif": 1800,"lieux": [
             {
                 "adresse": "10 rue de la paix",
                 "ville":"Paris"
@@ -70,7 +71,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2023-12-01 à 2023-12-10",
         "titre": "Expert en Sécurité Informatique",
         "nombrePlaces": 10,
-        "tarif": "2000 EUR","lieux": [
+        "tarif": 2000,"lieux": [
             {
                 "adresse": "10 rue de la paix",
                 "ville":"Paris"
@@ -90,7 +91,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2024-01-07 à 2024-01-17",
         "titre": "Développeur Full Stack JS",
         "nombrePlaces": 15,
-        "tarif": "1600 EUR","lieux": [
+        "tarif": 1600,"lieux": [
             {
                 "adresse": "10 rue de la paix",
                 "ville":"Paris"
@@ -110,7 +111,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2024-02-11 à 2024-02-20",
         "titre": "Designer UX/UI",
         "nombrePlaces": 18,
-        "tarif": "1400 EUR","lieux": [
+        "tarif": 1400,"lieux": [
             {
                 "adresse": "10 rue de la paix",
                 "ville":"Paris"
@@ -130,7 +131,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2024-03-05 à 2024-03-15",
         "titre": "Développeur Blockchain",
         "nombrePlaces": 10,
-        "tarif": "2200 EUR",
+        "tarif": 2200,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",
@@ -151,7 +152,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2024-04-01 à 2024-04-11",
         "titre": "Ingénieur Big Data",
         "nombrePlaces": 12,
-        "tarif": "2500 EUR",
+        "tarif": 2500,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",
@@ -172,7 +173,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2024-05-06 à 2024-05-16",
         "titre": "Spécialiste en Machine Learning",
         "nombrePlaces": 8,
-        "tarif": "2700 EUR",
+        "tarif": 2700,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",
@@ -193,7 +194,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2024-06-10 à 2024-06-20",
         "titre": "DevOps",
         "nombrePlaces": 20,
-        "tarif": "1900 EUR",
+        "tarif": 1900,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",
@@ -214,7 +215,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2024-07-15 à 2024-07-25",
         "titre": "Développeur Frontend Avancé",
         "nombrePlaces": 15,
-        "tarif": "1200 EUR",
+        "tarif": 1200,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",
@@ -235,7 +236,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2024-08-01 à 2024-08-11",
         "titre": "Développeur de Jeux",
         "nombrePlaces": 14,
-        "tarif": "2100 EUR",
+        "tarif": 2100,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",
@@ -256,7 +257,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2024-09-05 à 2024-09-15",
         "titre": "Analyste de Bases de Données",
         "nombrePlaces": 12,
-        "tarif": "1100 EUR",
+        "tarif": 1100,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",
@@ -277,7 +278,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2024-10-10 à 2024-10-20",
         "titre": "Architecte Microservices",
         "nombrePlaces": 9,
-        "tarif": "2300 EUR",
+        "tarif": 2300,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",
@@ -298,7 +299,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2024-11-01 à 2024-11-11",
         "titre": "Scrum Master",
         "nombrePlaces": 20,
-        "tarif": "1000 EUR",
+        "tarif": 1000,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",
@@ -319,7 +320,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2024-12-07 à 2024-12-17",
         "titre": "Expert en Vision par Ordinateur",
         "nombrePlaces": 10,
-        "tarif": "3000 EUR",
+        "tarif": 3000,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",
@@ -340,7 +341,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2025-01-12 à 2025-01-22",
         "titre": "Ingénieur QA Automatisation",
         "nombrePlaces": 13,
-        "tarif": "1600 EUR",
+        "tarif":1600,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",
@@ -361,7 +362,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2025-02-15 à 2025-02-25",
         "titre": "Développeur Full Stack Angular",
         "nombrePlaces": 12,
-        "tarif": "1700 EUR",
+        "tarif":1700,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",
@@ -382,7 +383,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2025-03-10 à 2025-03-20",
         "titre": "Spécialiste Marketing Digital",
         "nombrePlaces": 15,
-        "tarif": "1400 EUR",
+        "tarif": 1400,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",
@@ -403,7 +404,7 @@ export const mockCourses: ICourse[] = [
         "dates": "2025-04-04 à 2025-04-14",
         "titre": "Consultant en Intelligence Artificielle",
         "nombrePlaces": 8,
-        "tarif": "2500 EUR",
+        "tarif": 2500,
         "lieux": [
             {
                 "adresse": "10 rue de la paix",

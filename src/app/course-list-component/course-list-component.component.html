@@ -1,7 +1,21 @@
 <h1>Liste de cours</h1>
+
+<!-- <p>{{ "1234456790123698"  | cb }} </p> -->
+
+
+<!-- <p> Montant HT: {{1000}}</p>
+<p> Montant TTC: {{ 1000 | toTTC}}</p> -->
 <section class="container">
-  <app-search-course [formationsList]="ArrayStackTechnique" (formationSelected)="recevSelectedFormation($event)">
-  </app-search-course>
+  <!-- <app-search-course [formationsList]="ArrayStackTechnique" (formationSelected)="recevSelectedFormation($event)">
+  </app-search-course> -->
+
+  <input type="text" [(ngModel)]="searchNgModel" name="searchNgModel" />
+  <ul>
+    <li *ngFor="let course of COURSES  | search:searchNgModel">
+      {{course.nom }}
+    </li>
+  </ul>
+
   <div class="row">
     <!-- -->
     <div *ngFor="let formation of ArrayFormationFilter" [ngClass]="{
@@ -25,8 +39,9 @@
         <p class="card-places fcomplete" *ngIf="formation.nombrePlaces >= 15">
           Formation complète
         </p>
+        <p class="card-tarif">Tarif: {{ formation.tarif | number:"1.0-2" }} EUR</p>
+        <p class="card-tarif">Tarif: {{ formation.tarif | toDollars | number:"1.0-2" }} $</p>
 
-        <p class="card-tarif">Tarif: {{ formation.tarif }} EUR</p>
       </div>
       <!-- <a routerLink="/registration">Je m'inscris</a> -->
       <!-- Button trigger modal -->
